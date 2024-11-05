@@ -45,6 +45,14 @@ public class Program {
 		sellerDao.insert(newSeller);
 		System.out.println("Inserted! New id = " + newSeller.getId());
 		
+		System.out.println("\n=== TEST 5: seller Update =====");
+		Seller find = sellerDao.findByid(1);
+		find.setName("Maria");
+		find.setBaseSalary(4890.45);
+		sellerDao.update(find);
+		System.out.println("Inserted! New id = " + find.getId());
+		
+		
 		
 	}
 
